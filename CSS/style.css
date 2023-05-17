@@ -1,0 +1,424 @@
+/* Start Global Rules */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&family=Press+Start+2P&display=swap');
+
+
+:root {
+  --color-border--1: #ffb545;
+  --color-border--2: #00c46a;
+  --color-main--1: #2d3439;
+  --color-main--2: #42484d;
+  --color-light--3: rgb(214, 222, 224);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  height: 100vh;
+}
+
+#map {
+  background-color: #aaa;
+}
+
+
+.container .side {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem 1.5rem 0.6rem;
+  background-color: var(--color-main--1);
+}
+
+.container img {
+  width: 120px;
+}
+
+.container .logo {
+  display: flex;
+  justify-content: center;
+  width: 115%;
+}
+
+
+.container .copy {
+  margin-top: auto;
+  text-align: center;
+  color: var(--color-light--3);
+  width: 110%;
+}
+
+.copy .author {
+  color: var(--color-border--2);
+  font-size: 30px;
+}
+
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow-y:scroll ;
+  height: 40vh;
+  margin-top: auto;
+  margin-left: 30px  ;
+}
+
+.list::-webkit-scrollbar{
+  display: none;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+form select  , input{
+  width: 60%;
+  padding: 0.3rem 1.1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--color-light--3);
+  transition: all 0.2s;
+  font-size: 12px;
+  margin-left: auto;
+  padding: 10px;
+}
+
+form select {
+  padding: 0.5rem 0.8rem ;
+}
+
+input::placeholder {
+  font-size: 12px;
+}
+
+
+form label {
+  color: white;
+  font-size: 12px;
+}
+
+form .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form option {
+  background-color: white;
+}
+
+form input[type=submit] {
+  display: none;
+}
+
+.form {
+  background-color: var(--color-main--2);
+  height: 25%;
+  align-items: center;
+  display: flex ; 
+  border-radius: 10px;
+  box-shadow: 0px 3px 2px;
+  margin-top: auto;
+  margin-left: 20px;
+  padding: 10px;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.container .list .box {
+  padding: 12px;
+  border-radius: 10px;
+  background-color: var(--color-main--2);
+  margin: 15px 0 ;
+  align-items: center;
+  line-height: 3;
+  cursor: pointer;
+  position: relative;
+  height: fit-content;
+}
+
+.side .delete-all {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.side .delete-all .delete {
+  font-size: 15px;
+  padding: 5px;
+  background-color: var(--color-border--2);
+  border-radius: 10px;
+  border: 2px solid var(--color-border--2);
+  cursor: pointer;
+  box-shadow: 0px 3px 3px var(--color-main--2);
+  margin-left: 40px;
+  color: white;
+}
+
+.container .list .box i {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 25px;
+  color: var(--color-border--2);
+}
+
+
+.container .box h2 {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.box p {
+  color: white;
+  font-size: 12px;
+  display: grid;
+  text-align: center;
+}
+
+
+.box span {
+  color: var(--color-light--3) ;
+  margin: 0 2px;
+}
+
+.running {
+  border-left: 5px solid var(--color-border--2);
+}
+
+.cycling {
+  border-left: 5px solid var(--color-border--1);
+}
+
+/* Leaflet */
+
+.leaflet-popup .leaflet-popup-content-wrapper  {
+  background-color: var(--color-main--2);
+  color: white;
+  border-radius: 10px;
+  padding-right: 0.6rem;
+}
+
+.leaflet-popup .leaflet-popup-content {
+  font-size: 12px;
+}
+
+.leaflet-popup .leaflet-popup-tip {
+  background-color: var(--color-main--2);
+}
+
+.running-pop .leaflet-popup-content-wrapper {
+  border-left: 5px solid var(--color-border--2);
+}
+
+.cycling-pop .leaflet-popup-content-wrapper {
+  border-left: 5px solid var(--color-border--1);
+}
+
+/* Responsive */
+
+@media (max-width : 1000px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .form {
+    display: flex;
+    flex-direction:column ;
+    justify-content: center; 
+  }
+
+  .container .list .box {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .container .list .box p {
+    font-size: 25px;
+  }
+
+  form label {
+    font-size: 15px;
+  }
+
+  .side {
+    height: 100vh;
+  }
+
+  #map {
+    height: 50vh;
+  }
+
+
+}
+
+
+@media (max-width:767px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+   .container img {
+    width: 100px;
+  }
+
+  .side {
+    height: 100vh;
+  }
+
+  #map {
+    height: 60vh;
+  }
+
+  .form {
+    display: flex;
+    flex-direction:column ;
+    justify-content: center; 
+  }
+
+  form label {
+    font-size: 15px;
+  }
+
+  form input , select {
+    width: 40%;
+    font-size: 8px;
+  }
+
+  form select {
+   width: 40%;
+   font-size: 10px;
+   padding: 0.45rem 0.5rem;
+  }
+
+
+  .list .box h2 {
+    font-size: 15px;
+  }
+
+
+  .box span {
+    margin : 0   ;
+  }
+
+  .container .list .box {
+    padding: 15px ;
+    text-align: center;
+  }
+
+  .container .list .box p {
+    font-size: 15px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/all.min.css">
+  <link rel="stylesheet" href="CSS/normalize.css">
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <!-- Leafletjs -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+<script  src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <title>Mapty</title>
+</head>
+<body>
+  
+    <div class="container">
+      <div class="side">
+
+        <div class="logo">
+          <img src="images/logo.png" alt="">
+        </div>
+
+        <div class="form">
+          <form action="">
+
+            <div class="row">
+              <label>Type</label>
+              <select name="" id="select">
+                <option value="running">Running</option>
+                <option value="cycling">Cycling</option>
+              </select>
+            </div>
+
+            <div class="row">
+              <label >Distance</label>
+              <input type="number" placeholder="km" class="distance">
+            </div>
+
+          <div class="row">
+            <label >Duration</label>
+            <input type= "number" placeholder="min" class="duration">
+          </div>
+
+          <div class="row">
+            <label >Rate</label>
+            <input type="number" placeholder="step/min" class="rate">
+          </div>
+
+          <input type="submit" class="clicked">
+
+          </form>
+        </div>
+
+        <div class="delete-all">
+            <button class="delete">Delete all Workouts</button>
+        </div>
+  
+        <div class="list">
+
+
+
+
+        </div>
+
+        <div class="copy">
+          <p>© Copyright by <span class="author">Josef</span></p>
+        </div>
+
+
+      </div>
+      <div id="map"></div>
+    </div>
+
+
+
+  <script  src="script.js"></script>
+</body>
+</html>
